@@ -1,0 +1,12 @@
+services:
+  GenericWeb:
+    container_name: GenericWeb
+    image: generic-web
+    restart: no
+    volumes: 
+      - ${PWD}/db_data/:/app/db_data
+      - ${PWD}/ui/:/app/ui
+    env_file:
+      - ./.env
+    ports:
+      - 8080:8080
