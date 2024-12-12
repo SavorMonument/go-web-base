@@ -10,6 +10,5 @@ else
 
   docker build -t generic-web -f cmd/web/Dockerfile .
   docker compose -f deployments/compose.yml up -d
-  # docker exec -it IceMindWeb bash -c "go run cmd/web/main.go"
-  docker logs -f IceMindWeb
+  docker logs -f generic-web
 fi
